@@ -8,6 +8,8 @@ using UnityEngine.Events;
 public class MenuScript : MonoBehaviour
 {
     public GameObject SettingPanel;
+    public GameObject LevelPanel;
+    public GameObject GamePlayPanel;
     public Slider MusicSlider, VfxSlider;
 
     private void Awake()
@@ -17,6 +19,8 @@ public class MenuScript : MonoBehaviour
         {
             //Gley.MobileAds.Internal.MobileAdsTest.Instance.HideBanner();
         }
+        LevelPanel.SetActive(false);
+        GamePlayPanel.SetActive(true);
     }
 
     private void Start()
@@ -57,7 +61,7 @@ public class MenuScript : MonoBehaviour
             Configs.SetStartTime();
             int n = PlayerPrefs.GetInt("Numlevel", 1) % SceneManager.sceneCountInBuildSettings;
             if (n == 0) n = 1;
-            SceneManager.LoadScene(n);
+            SceneManager.LoadScene(4);
         }
         else
         {
@@ -65,6 +69,11 @@ public class MenuScript : MonoBehaviour
             if (n == 0) n = 1;
             SceneManager.LoadScene(n);
         }
+    }
+    public void NewStartBtn()
+    {
+        LevelPanel.SetActive(true);
+        GamePlayPanel.SetActive(false);
     }
 
 

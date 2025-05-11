@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class UIScript : MonoBehaviour
 {
     public GameObject winPAnel;
+    public GameObject PausePanel;
 
     int lostCount = 0;
     public static UIScript instance;
@@ -30,6 +31,23 @@ public class UIScript : MonoBehaviour
 
     }
 
+    public void PauseBtn()
+    {
+        PausePanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void ResumeBtn()
+    {
+        PausePanel.SetActive(false);
+        Time.timeScale = 1;
+    }
+    public void HomeBtn()
+    {
+        PausePanel.SetActive(false);
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1;
+    }
 
     public void showWinPanel()
     {

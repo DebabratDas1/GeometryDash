@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public enum Speeds { Slow = 0, Normal = 1, Fast = 2, Faster = 3, Fastest = 4 };
 //public enum Gamemodes { Cube = 0, Ship = 1, Ball = 2, UFO = 3, Wave = 4, Spider = 5 };
@@ -26,6 +27,20 @@ public class Movement : MonoBehaviour
     public AudioClip ExplosionSound, WinSound;
     AudioSource source;
     bool gameOver = false;
+
+    bool IsPointerOverUI()
+    {
+#if UNITY_EDITOR
+        return EventSystem.current.IsPointerOverGameObject();
+#elif UNITY_ANDROID || UNITY_IOS
+    if (Input.touchCount > 0)
+        return EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId);
+    else
+        return false;
+#else
+    return EventSystem.current.IsPointerOverGameObject();
+#endif
+    }
 
     void Start()
     {
@@ -109,13 +124,12 @@ public class Movement : MonoBehaviour
         rb.gravityScale = 9.057f * Gravity;
         LimitYVelocity(19.5269f, rb);
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !IsPointerOverUI())
         {
             if (OnGround() && !clickProcessed)
             {
                 clickProcessed = true;
                 rb.linearVelocity = Vector2.up * 19.5269f * Gravity;
-
             }
         }
         if (OnGround())
