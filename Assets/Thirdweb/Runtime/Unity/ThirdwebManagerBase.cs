@@ -242,6 +242,8 @@ namespace Thirdweb.Unity
 
         protected abstract string MobileRedirectScheme { get; }
 
+        public Action onThirdwebInitialized;
+
         // ------------------------------------------------------
         // Lifecycle Methods
         // ------------------------------------------------------
@@ -295,6 +297,7 @@ namespace Thirdweb.Unity
             }
 
             Initialized = true;
+            onThirdwebInitialized?.Invoke();
         }
 
         // ------------------------------------------------------

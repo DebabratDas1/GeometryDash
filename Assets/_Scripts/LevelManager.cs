@@ -16,6 +16,8 @@ public class LevelManager : MonoBehaviour
 
     public void LoadLevel(int levelNumber)
     {
-        SceneManager.LoadScene(levelNumber);
+        string sceneName = "level "+(levelNumber+1);
+        Debug.Log("Scene to load : " + sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 }

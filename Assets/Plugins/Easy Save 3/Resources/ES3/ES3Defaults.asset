@@ -30,17 +30,23 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp-firstpass
-    - CFXREditor
+    - Thirdweb.Plugins
     - Assembly-CSharp
+    - CFXREditor
     - PsdPlugin
     - Cinemachine
     - ScriptablePacker
+    - Thirdweb.Unity
     - CFXRRuntime
     - CFXRDemo
     - GoogleMobileAds.Editor
+    - Thirdweb.Editor
     - KinoBloom.Runtime
+    - WebGLThreadingPatcher.Runtime
     - ToonyColorsPro.Demo.Editor
     - CFXR.WelcomeScreen
+    - Thirdweb.Examples
+    - WebGLThreadingPatcher.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

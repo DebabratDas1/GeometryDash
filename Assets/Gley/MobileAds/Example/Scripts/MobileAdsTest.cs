@@ -4,9 +4,9 @@ using UnityEngine.Events;
 using System;
 namespace Gley.MobileAds.Internal
 {
-    public class MobileAdsTest : MonoBehaviour
+    public class MobileAdsTest_DD : MonoBehaviour
     {
-        public static MobileAdsTest Instance { set; get; }
+        public static MobileAdsTest_DD Instance { set; get; }
         
         void Awake()
         {

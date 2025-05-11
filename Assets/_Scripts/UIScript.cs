@@ -67,7 +67,7 @@ public class UIScript : MonoBehaviour
             Time.timeScale = 0f;
 
             // Show the interstitial ad
-            Gley.MobileAds.Internal.MobileAdsTest.Instance.ShowInterstitial();
+            //Gley.MobileAds.Internal.MobileAdsTest.Instance.ShowInterstitial();
 
             // Callback or action after the ad is shown
             Time.timeScale = 1f;  // Resume game time
@@ -103,7 +103,7 @@ public class UIScript : MonoBehaviour
             Time.timeScale = 0f;
 
             // Show the interstitial ad (you may want to create a custom method with callback)
-            Gley.MobileAds.Internal.MobileAdsTest.Instance.ShowInterstitial();
+            //Gley.MobileAds.Internal.MobileAdsTest.Instance.ShowInterstitial();
 
             // Callback or action after the ad is shown
             Time.timeScale = 1f;  // Resume game time

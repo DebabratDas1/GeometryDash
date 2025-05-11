@@ -27,7 +27,7 @@ public class MenuScript : MonoBehaviour
     {
         if (Configs.is_banner == 1)
         {
-            Gley.MobileAds.Internal.MobileAdsTest.Instance.ShawBanner();
+            //Gley.MobileAds.Internal.MobileAdsTest.Instance.ShawBanner();
         }
 
         MusicSlider.value = PlayerPrefs.GetFloat("MusicSlider", .5f);
@@ -54,7 +54,7 @@ public class MenuScript : MonoBehaviour
             Time.timeScale = 0f;
 
             // Show the interstitial ad using the existing method
-            Gley.MobileAds.Internal.MobileAdsTest.Instance.ShowInterstitial();
+            //Gley.MobileAds.Internal.MobileAdsTest.Instance.ShowInterstitial();
 
             // Proceed with the rest of the logic after showing the ad
             Time.timeScale = 1f;
