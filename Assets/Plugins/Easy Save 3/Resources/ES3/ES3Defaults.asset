@@ -35,14 +35,11 @@ MonoBehaviour:
     - PsdPlugin
     - Cinemachine
     - ScriptablePacker
-    - DOTween.Modules
     - CFXRRuntime
     - CFXRDemo
-    - DOTweenPro.Scripts
     - GoogleMobileAds.Editor
     - KinoBloom.Runtime
     - ToonyColorsPro.Demo.Editor
-    - DOTweenPro.EditorScripts
     - CFXR.WelcomeScreen
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
