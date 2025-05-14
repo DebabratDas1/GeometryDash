@@ -18,5 +18,5 @@ MonoBehaviour:
   rpcUrl: https://rpc.soneium.org/
   nativeCurrencyJson: "{\"name\":\"Soneium\",\"symbol\":\"ETH\",\"decimals\":18}\r\r"
   blockExplorerUrl: https://soneium.blockscout.com/
-  dropERC20ContractAddress: 0x8E93324c9ac2F9C32982507bE4BB29bc5AA6c032
+  dropERC20ContractAddress: 0xD1CAe16ec9eC34CE906F2C425B554042CA04Fa4E
   purchasingTokenContractAddress: 0x8089b5c17C6A922645CF89841aEdc77A6D54FD2A

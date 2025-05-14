@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc102399c934ca45b5ff1a2dead175c, type: 3}
   m_Name: BuildNetwork
   m_EditorClassIdentifier: 
-  selectedNetwork: 2
+  selectedNetwork: 1
